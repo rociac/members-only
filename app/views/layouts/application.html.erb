@@ -11,14 +11,10 @@
 
   <body>
   <% flash.each do |message_type, message| %>
-   <%= content_tag(:div, message) %> 
+   <%= content_tag(:div, message, class: "alert alert-#{message_type}")%> 
   <% end %>
   <%= yield %>
 
-  <% if logged_in? %>
-    <%= link_to 'Logout', logout_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Login', login_path%>
-  <% end %>
+ 
   </body>
 </html>
