@@ -1,0 +1,10 @@
+<%= form_for(@micropost, url: microposts_new_path) do |p| %> 
+  <%= p.label :title %>
+  <%= p.text_field :title %>
+
+  <%= p.label :content %>
+  <%= p.text_field :content %>
+  
+  <%= p.submit "Submit" %>
+
+<% end %>

@@ -1,0 +1,14 @@
+<% @microposts.each do |post| %>
+  <h2> <%= post.title %> </h2>
+  <p> <%= post.content %> </p>
+
+  <% if logged_in? %>
+
+  <p> Author: 
+  <%= post.user.name %> </p>
+  <% end %>
+
+
+<% end %>
+
+<%= link_to 'Create Posts', microposts_new_path %>
