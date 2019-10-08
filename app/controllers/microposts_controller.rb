@@ -8,9 +8,13 @@ class MicropostsController < ApplicationController
   end
 
   def create
-    @micropost = Micropost.new(user_params)
-    @micropost.user = current_user
-    redirect_to microposts_index_path if @micropost.save
+    @micropost = current_user.microposts.build(micropost_params)
+    if @micropost.save
+      flash[:success] = "Micropost created!"
+      redirect_to root_url
+    else
+      render 'static_pages/home'
+    end
   end
 
   def index
@@ -23,7 +27,7 @@ class MicropostsController < ApplicationController
     redirect_to login_path unless logged_in?
   end
 
-  def user_params
+  def micropost_params
     params.require(:micropost).permit(:title, :content)
   end
 end
