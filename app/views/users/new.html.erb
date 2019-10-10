@@ -1,18 +1,22 @@
+<div class = "container">
+<div class="col-md-6 col-md-offset-3">
 <%= form_for(@user, url: users_path) do |p| %> 
+
 <%= render 'shared/error_messages'%>
   <%= p.label :name %>
-  <%= p.text_field :name %>
+  <%= p.text_field :name, class: 'form-control' %>
 
   <%= p.label :email %>
-  <%= p.email_field :email %>
+  <%= p.email_field :email, class: 'form-control' %>
 
   <%= p.label :password %>
-  <%= p.password_field :password %>
+  <%= p.password_field :password, class: 'form-control' %>
 
   <%= p.label :password_confirmation %>
-  <%= p.password_field :password_confirmation %>
+  <%= p.password_field :password_confirmation, class: 'form-control' %>
   
 
-  <%= p.submit "Sign Up" %>
-
+  <%= p.submit "Sign Up", class: 'btn btn-primary' %>
 <% end %>
+</div>
+</div>

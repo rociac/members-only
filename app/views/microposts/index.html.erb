@@ -1,3 +1,7 @@
+<div class = "container">
+<div class="col-md-6 col-md-offset-3">
+<%= link_to 'Create Posts', new_micropost_path, class: 'btn btn-primary' %>
+
 <% @microposts.each do |post| %>
   <h2> <%= post.title %> </h2>
   <p> <%= post.content %> </p>
@@ -9,6 +13,8 @@
   <% end %>
 
 
+
 <% end %>
 
-<%= link_to 'Create Posts', new_micropost_path %>
+</div>
+</div>
