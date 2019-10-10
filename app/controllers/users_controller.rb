@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = 'Welcome, to members-only!'
       log_in(@user)
-      redirect_to microposts_index_path
+      redirect_to microposts_path
     else
       flash[:danger] = 'There were some errors'
       render 'new'

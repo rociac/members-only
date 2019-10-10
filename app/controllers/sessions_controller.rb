@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:session][:email].downcase)
     if @user&.authenticate(params[:session][:password])
       log_in @user
-      redirect_to microposts_index_path
+      redirect_to microposts_path
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
