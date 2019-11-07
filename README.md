@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Members only app built with authentication using bcrypt gem. 
 
-Things you may want to cover:
+## Ruby version:
 
-* Ruby version
+```
+$ ruby-2.5.1
+```
 
-* System dependencies
+## Rails version:
 
-* Configuration
+```
+$ rails-5.2.3
+```
 
-* Database creation
+Made by:
 
-* Database initialization
++ [Rodolfo Cisneros](https://github.com/rociac)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
++ [Adebola Adeniran](https://github.com/onedebos)
